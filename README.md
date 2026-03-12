@@ -1,4 +1,6 @@
 ## 🚀 專案簡介
+<pre>
+<code><b>```mermaid</b>
 flowchart LR
     subgraph Sources ["🌍 Data Sources"]
         API["Open-Meteo API<br>(Weather & AQI)"]
@@ -29,7 +31,8 @@ flowchart LR
     style BQ fill:#d4edda,stroke:#28a745,stroke-width:2px
     style Local fill:none,stroke:#0db7ed,stroke-dasharray: 5 5,stroke-width:2px
     style GCP fill:none,stroke:#4285f4,stroke-dasharray: 5 5,stroke-width:2px
-
+<b>```</b></code>
+</pre>
 
 ## 🚀 快速開始與環境配置 (Setup & Configuration)
 
