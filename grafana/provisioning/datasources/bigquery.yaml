@@ -1,0 +1,16 @@
+apiVersion: 1
+
+datasources:
+  - name: Google BigQuery
+    type: grafana-google-bigquery-datasource
+    access: proxy
+    isDefault: true
+    jsonData:
+      authenticationType: jwt
+      defaultProject: "${GCP_PROJECT_ID}"
+      clientEmail: "${GCP_SERVICE_ACCOUNT_EMAIL}"
+      tokenUri: "https://oauth2.googleapis.com/token"
+    secureJsonData:
+      # 這裡的路徑要跟 docker-compose.yaml 冒號右邊的路徑完全一致
+      jwtKeyFile: "/etc/grafana/gcp-key.json"
+    editable: true

@@ -1,0 +1,75 @@
+### --- Python 相關 --- ###
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+### --- Data --- ###
+
+data/
+*.csv
+*.parquet
+*.jsonl
+*.avro
+*.sql
+*.zip
+*.tar.gz
+
+### --- 環境變數與金鑰 (Security) --- ###
+.env
+.flaskenv
+# GCP 服務帳戶金鑰或 AWS 憑證
+#*.json
+credentials/
+.aws/
+.gcloud/
+
+### --- Airflow 相關 --- ###
+airflow/logs/
+airflow/airflow.db
+airflow/airflow-webserver.pid
+standalone_admin_password.txt
+config/airflow.cfg
+
+### --- Docker 相關 --- ###
+.docker/
+docker-compose.override.yml
+
+### --- 日誌與暫存檔 (Logs & Temp) --- ###
+logs/
+*.log
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store (MacOS)
+
+### --- IDE 設定 --- ###
+.vscode/
+.idea/
+
+### 
+config/gcp-key.json
+dags/dag0203.py
+dags/my_dag0202.py
+dags/mydag0205.py
+dags/mydag0206.py
+dags/mydag0207.py
+dags/mydag0209.py
+dags/mydag0213.py
+dags/mydag0216.py
+dags/mydag0220.py
+dags/mydag0223.py
+
+# 排除 Grafana 資料庫與暫存檔
+*.db
+grafana-data/
+**/grafana.db
+**/plugins/
+**/unified-search/
+**/csv/
+**/pdf/
+**/png/

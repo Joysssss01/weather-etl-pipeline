@@ -1,0 +1,12 @@
+apiVersion: 1
+
+providers:
+  - name: 'Local Project Dashboards'
+    orgId: 1
+    folder: 'Weather Pipeline'  # 在 Grafana 介面顯示的資料夾名稱
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      # 指向容器內存放 JSON 的路徑，對應你 docker-compose 的掛載
+      path: /var/lib/grafana/dashboards
