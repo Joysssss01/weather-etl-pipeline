@@ -1,39 +1,3 @@
-## 🚀 專案簡介
-<pre>
-<code><b>```mermaid</b>
-flowchart LR
-    subgraph Sources ["🌍 Data Sources"]
-        API["Open-Meteo API<br>(Weather & AQI)"]
-    end
-
-    subgraph Local ["🐳 Local Environment (Docker)"]
-        AF["Apache Airflow<br>(Orchestration & Processing)"]
-        GF["Grafana<br>(Visualization)"]
-    end
-
-    subgraph GCP ["☁️ Google Cloud Platform"]
-        GCS[("Cloud Storage<br>(Data Lake)")]
-        BQ[("BigQuery<br>(Data Warehouse)")]
-    end
-
-    %% 資料流向定義
-    API -- "Fetch JSON<br>(Python/Pandas)" --> AF
-    AF -- "Upload raw CSV<br>(Daily)" --> GCS
-    GCS -- "GCSToBigQuery<br>(Append Data)" --> BQ
-    AF -. "Update Dim Table<br>(Replace)" .-> BQ
-    BQ -- "SQL Query" --> GF
-
-    %% 樣式設定
-    style API fill:#f9f2f4,stroke:#c7254e,stroke-width:2px
-    style AF fill:#e8f4f8,stroke:#17a2b8,stroke-width:2px
-    style GF fill:#fff3cd,stroke:#ffc107,stroke-width:2px
-    style GCS fill:#d4edda,stroke:#28a745,stroke-width:2px
-    style BQ fill:#d4edda,stroke:#28a745,stroke-width:2px
-    style Local fill:none,stroke:#0db7ed,stroke-dasharray: 5 5,stroke-width:2px
-    style GCP fill:none,stroke:#4285f4,stroke-dasharray: 5 5,stroke-width:2px
-<b>```</b></code>
-</pre>
-
 ## 🚀 快速開始與環境配置 (Setup & Configuration)
 
 本專案使用 Docker Compose 同步啟動 Airflow 與 Grafana。為了確保資料安全，GCP 的金鑰檔案與敏感設定不會包含在程式碼倉庫中。
