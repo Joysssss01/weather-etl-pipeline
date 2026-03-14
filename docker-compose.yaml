@@ -105,7 +105,7 @@ services:
       - ./config/gcp-key.json:/etc/grafana/gcp-key.json
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
-      - GF_INSTALL_PLUGINS=grafana-google-bigquery-datasource # 自動安裝 BigQuery 插件
+      - GF_PLUGINS_PREINSTALL=grafana-bigquery-datasource # 自動安裝 BigQuery 插件
       # 將 .env 的值傳遞給 Grafana 容器內部
       - GCP_PROJECT_ID=${GCP_PROJECT_ID}
       - GCP_SERVICE_ACCOUNT_EMAIL=${GCP_SERVICE_ACCOUNT_EMAIL}
