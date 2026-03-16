@@ -1,3 +1,5 @@
+<img width="1280" height="720" alt="data_engineering_project" src="https://github.com/user-attachments/assets/697ba2eb-c600-4f69-aea3-d40db50f3942" />
+
 ## 🚀 快速開始與環境配置 (Setup & Configuration)
 
 本專案使用 Docker Compose 同步啟動 Airflow 與 Grafana。為了確保資料安全，GCP 的金鑰檔案與敏感設定不會包含在程式碼倉庫中。
@@ -15,6 +17,8 @@
 airflow-docker/config/gcp-key.json
 
 ```
+
+
 
 
 
